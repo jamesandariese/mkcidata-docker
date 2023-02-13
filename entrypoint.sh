@@ -18,4 +18,4 @@ done
 
 ls /tmp/build-iso
 
-mkisofs -J -R -V CIDATA -o /out/build-iso.iso /tmp/build-iso
+mkisofs -J -R -V ${VOLUMEID:-CIDATA} -o /out/build-iso.iso /tmp/build-iso

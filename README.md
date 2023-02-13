@@ -1,7 +1,9 @@
 
-# `mkisofs-docker`
+# `mkcidata-docker`
 
-A docker image for building trivial ISOs trivially
+A docker image for building trivial cidata (cloud-init) ISOs trivially.
+
+May be used for any tiny files, however.
 
 ## Usage
 
@@ -65,4 +67,9 @@ function mkcidata() {
 }
 
 mkcidata cidata.iso "meta-data=instance-id: i-unknown01" "user-data=$(cat user-data-fragments/*.yaml)"
+```
+
+Non-CIDATA mode, set the volume ID to `work` instead:
+```bash
+docker run -e VOLUMEID=work -v "$PWD":"/out" mkisofs "my-work-volume=crazy-high" "my-work-quality=best"
 ```
