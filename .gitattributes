@@ -1,0 +1,8 @@
+*	text=auto eof=lf
+*.md	text
+*.rst	text
+*.ps1	text eof=crlf
+*.psm1	text eof=crlf
+*.psd1	text eof=crlf
+*.bat	text eof=crlf
+*.txt	text eof=crlf
